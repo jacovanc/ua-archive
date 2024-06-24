@@ -56,7 +56,7 @@ def log_sampling_info(output_dir, view_id, report_name, sampling_info, sequence=
         log_file.write(f"  Sampling Space Sizes: {sampling_info['sampling_space_sizes']}\n")
         log_file.write("\n")
 
-def construct_output_file(property_name, view_id, report_id, report_name, sequence=None):
+def construct_output_file(property_name, view_id, report_id, report_name, start_date, end_date, sequence=None):
     """Construct the output file name based on provided parameters."""
     property_name_clean = clean_name(property_name) if property_name else ""
     report_name_clean = clean_name(report_name)
@@ -66,14 +66,14 @@ def construct_output_file(property_name, view_id, report_id, report_name, sequen
 
     if property_name_clean:
         if sequence:
-            return f"{output_dir}/{property_name_clean}_{view_id}_{report_id}_{report_name_clean}_report_{sequence}.csv"
+            return f"{output_dir}/{property_name_clean}_{view_id}_{report_id}_{report_name_clean}_{start_date}-{end_date}_report_{sequence}.csv"
         else:
-            return f"{output_dir}/{property_name_clean}_{view_id}_{report_id}_{report_name_clean}_report.csv"
+            return f"{output_dir}/{property_name_clean}_{view_id}_{report_id}_{report_name_clean}_{start_date}-{end_date}_report.csv"
     else:
         if sequence:
-            return f"{output_dir}/{view_id}_{report_id}_{report_name_clean}_report_{sequence}.csv"
+            return f"{output_dir}/{view_id}_{report_id}_{report_name_clean}_{start_date}-{end_date}_report_{sequence}.csv"
         else:
-            return f"{output_dir}/{view_id}_{report_id}_{report_name_clean}_report.csv"
+            return f"{output_dir}/{view_id}_{report_id}_{report_name_clean}_{start_date}-{end_date}_report.csv"
 
 def log_quota_exceeded(view_id):
     """Log the date and time when quota is exceeded."""
@@ -186,7 +186,7 @@ def generate_all_reports(report_configs, start_date, end_date, api_key, view_id,
 
     for report_config in report_configs:
         report_name = report_config['name']
-        output_file = construct_output_file(property_name, view_id, report_config['id'], report_name, sequence)
+        output_file = construct_output_file(property_name, view_id, report_config['id'], report_name, start_date, end_date, sequence)
 
         logging.info(f"Generating report for {report_name}")
         generate_report(report_config, start_date, end_date, api_key, view_id, report_name, output_file, sequence)
@@ -223,7 +223,7 @@ def main():
             logging.error(f"Report configuration for ID {args.report_id} not found.")
             return
         report_name = report_config['name']
-        output_file = construct_output_file(property_name, view_id, args.report_id, report_name, args.sequence)
+        output_file = construct_output_file(property_name, view_id, args.report_id, report_name, args.start, args.end, args.sequence)
 
         logging.info(f"Generate report for {report_name}")
         generate_report(report_config, args.start, args.end, api_key, view_id, report_name, output_file, args.sequence)

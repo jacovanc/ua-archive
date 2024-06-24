@@ -3,28 +3,28 @@ reports:
   - id: 1
     name: "Acquisition Overview"
     dimensions: ["ga:year", "ga:month", "ga:medium", "ga:source", "ga:campaign", "ga:sourceMedium", "ga:channelGrouping"]
-    metrics: ["ga:sessions", "ga:users", "ga:pageviews", "ga:totalEvents", "ga:goal1Completions", "ga:avgSessionDuration", "ga:bounceRate", "ga:newUsers", "ga:pageviewsPerSession"]
+    metrics: ["ga:sessions", "ga:users", "ga:pageviews", "ga:totalEvents", "ga:goalCompletionsAll", "ga:avgSessionDuration", "ga:bounceRate", "ga:newUsers"] 
     # Overall performance of different acquisition channels.
     # Identifying top-performing sources, understanding bounce rate and user engagement across channels.
 
   - id: 2
     name: "Acquisition Trends Over Time"
     dimensions: ["ga:date", "ga:medium", "ga:source", "ga:campaign"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Trends in acquisition performance over time.
     # Identifying seasonal variations and the impact of specific campaigns.
 
   - id: 3
     name: "Campaign Performance"
     dimensions: ["ga:campaign", "ga:date"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Performance of marketing campaigns.
     # Measuring effectiveness and user behavior from different campaigns.
 
   - id: 4
     name: "Social Media Acquisition"
     dimensions: ["ga:socialNetwork"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Performance of social media channels.
     # Understanding user engagement from social networks and identifying key social platforms.
 
@@ -32,35 +32,35 @@ reports:
   - id: 5
     name: "Audience Demographics Overview"
     dimensions: ["ga:userGender", "ga:userAgeBracket"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Overview of user demographics.
     # Tailoring marketing strategies to target audiences and identifying demographic segments with the highest engagement.
 
   - id: 6
     name: "Geographic Distribution"
     dimensions: ["ga:country", "ga:city", "ga:language"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Performance in different regions.
     # Identifying potential markets and understanding cultural and linguistic impacts on engagement.
 
   - id: 7
     name: "Device and Technology Usage"
     dimensions: ["ga:deviceCategory", "ga:browser", "ga:operatingSystem"]
-    metrics: ["ga:sessions", "ga:users", "ga:pageviews", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:pageviews", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # User behavior based on device and technology.
     # Optimizing site performance for different devices and identifying trends in technology usage.
 
   - id: 8
     name: "Audience Interests - Affinity Category"
     dimensions: ["ga:interestAffinityCategory"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Identifying user interests.
     # Tailoring content and offers based on interests and understanding affinity and in-market segments.
     
   - id: 9
     name: "Audience Interests - Market Category"
     dimensions: ["ga:interestInMarketCategory"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Identifying user interests.
     # Tailoring content and offers based on interests and understanding affinity and in-market segments.
 
@@ -68,28 +68,28 @@ reports:
   - id: 10
     name: "Site Content Performance Overview"
     dimensions: ["ga:pagePath", "ga:date"]
-    metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:bounceRate", "ga:exitRate"]
+    metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:bounceRate", "ga:exitRate", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Performance of site content.
     # Identifying popular pages and understanding user engagement with content.
 
   - id: 11
     name: "Landing Page Performance"
     dimensions: ["ga:landingPagePath", "ga:date"]
-    metrics: ["ga:sessions", "ga:percentNewSessions", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:percentNewSessions", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Effectiveness of landing pages.
     # Understanding user behavior on entry pages and optimizing landing pages for better engagement.
 
   - id: 12
     name: "Internal Site Search"
     dimensions: ["ga:searchKeyword", "ga:searchStartPage"]
-    metrics: ["ga:searchUniques", "ga:avgSearchResultViews", "ga:searchExitRate", "ga:percentSearchRefinements", "ga:avgSearchDuration", "ga:avgSearchDepth"]
+    metrics: ["ga:searchUniques", "ga:avgSearchResultViews", "ga:searchExitRate", "ga:percentSearchRefinements", "ga:avgSearchDuration", "ga:avgSearchDepth", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # User search behavior on the site.
     # Understanding what users are searching for and identifying gaps in content.
 
   - id: 13
     name: "Event Tracking"
     dimensions: ["ga:eventCategory", "ga:eventAction", "ga:eventLabel", "ga:date"]
-    metrics: ["ga:totalEvents", "ga:uniqueEvents", "ga:goal1Completions"]
+    metrics: ["ga:totalEvents", "ga:uniqueEvents", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # User interactions with site elements.
     # Measuring engagement with specific features and optimizing events for better performance.
 
@@ -97,7 +97,7 @@ reports:
   - id: 14
     name: "Ecommerce Performance Overview"
     dimensions: ["ga:date"]
-    metrics: ["ga:itemRevenue", "ga:transactionsPerSession"]
+    metrics: ["ga:itemRevenue", "ga:transactionsPerSession", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Overall ecommerce performance.
     # Identifying trends in sales and understanding peak sales periods.
 
@@ -119,7 +119,7 @@ reports:
   - id: 17
     name: "Conversion Analysis"
     dimensions: ["ga:goalCompletionLocation", "ga:goalPreviousStep1", "ga:goalPreviousStep2", "ga:goalPreviousStep3"]
-    metrics: ["ga:goal1Completions", "ga:goal1ConversionRate"]
+    metrics: ["ga:goalCompletionsAll", "ga:goalConversionRateAll"]
     # Conversion funnel analysis.
     # Understanding conversion paths and identifying drop-off points.
 
@@ -127,7 +127,7 @@ reports:
   - id: 18
     name: "User Engagement Over Time"
     dimensions: ["ga:date", "ga:hour", "ga:dayOfWeek"]
-    metrics: ["ga:users", "ga:sessions", "ga:sessionDuration", "ga:avgSessionDuration", "ga:bounceRate", "ga:pageviews", "ga:goal1Completions"]
+    metrics: ["ga:users", "ga:sessions", "ga:sessionDuration", "ga:avgSessionDuration", "ga:bounceRate", "ga:pageviews", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Trends in user engagement over time.
     # Identifying busy periods and optimizing content for peak times.
 
@@ -141,7 +141,7 @@ reports:
   - id: 20
     name: "Geographical User Distribution"
     dimensions: ["ga:country", "ga:city"]
-    metrics: ["ga:sessions", "ga:users", "ga:pageviews", "ga:bounceRate"]
+    metrics: ["ga:sessions", "ga:users", "ga:pageviews", "ga:bounceRate", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Performance in different regions.
     # Identifying potential markets and understanding cultural impacts on engagement.
 
@@ -156,19 +156,19 @@ reports:
   - id: 22
     name: "Combined Acquisition Report"
     dimensions: ["ga:source", "ga:medium", "ga:campaign", "ga:channelGrouping", "ga:referralPath", "ga:socialNetwork"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:totalEvents", "ga:pageviews", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:totalEvents", "ga:pageviews", "ga:goalCompletionsAll"]
     # Comprehensive view of acquisition data.
     # Detailed performance analysis of different acquisition channels and campaigns.
 
   - id: 23
     name: "Combined Audience Report"
     dimensions: ["ga:userGender", "ga:userAgeBracket", "ga:country", "ga:language", "ga:deviceCategory", "ga:browser", "ga:userType", "ga:interestInMarketCategory"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # Comprehensive view of audience data.
     # Detailed analysis of user demographics, interests, and behaviors.
     
   - id: 24
     name: "Acquisition Keywords"
     dimensions: ["ga:keyword"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goal1Completions"]
+    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
     # The keyword searched by users to reach your property.
