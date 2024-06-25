@@ -173,82 +173,102 @@ reports:
   #   metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:goalCompletionsAll", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction"]
   #   # The keyword searched by users to reach your property.
   #
-  - id: 25
-    name: "Site Content - All Pages"
-    dimensions: ["ga:pagePath"]
-    metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:entrances", "ga:bounceRate", "ga:exitRate", "ga:pageValue"]
+  # - id: 25
+  #   name: "Site Content - All Pages"
+  #   dimensions: ["ga:pagePath"]
+  #   metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:entrances", "ga:bounceRate", "ga:exitRate", "ga:pageValue"]
+  # 
+  # - id: 26 
+  #   name: "Site Content - Content Drilldown"
+  #   dimensions: ["ga:pagePathLevel1"]
+  #   metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:entrances", "ga:bounceRate", "ga:exitRate"]
+  #
+  # - id: 27 
+  #   name: "Site Content - Landing Pages"
+  #   dimensions: ["ga:landingPagePath"]
+  #   metrics: ["ga:sessions", "ga:percentNewSessions", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:transactionsPerSession"]
+  #
+  # - id: 28
+  #   name: "Site Content - Exit Pages"
+  #   dimensions: ["ga:pagePath"]
+  #   metrics: ["ga:exits", "ga:pageviews", "ga:uniquePageviews", "ga:exitRate"]
+  #
+  # - id: 29 
+  #   name: "Behaviour - All Pages by country"
+  #   dimensions: ["ga:pagePath", "ga:country"]
+  #   metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:entrances", "ga:bounceRate", "ga:exitRate", "ga:pageValue"]
+  #
+  # - id: 30 
+  #   name: "Behaviour - Landing pages by country"
+  #   dimensions: ["ga:landingPagePath", "ga:country"]
+  #   metrics: ["ga:sessions", "ga:percentNewSessions", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:transactionsPerSession"]
+  #
+  # - id: 31 
+  #   name: "Behaviour - Exit pages by country"
+  #   dimensions: ["ga:pagePath", "ga:country"]
+  #   metrics: ["ga:exits", "ga:pageviews", "ga:uniquePageviews", "ga:exitRate"]
+  #
+  # - id: 32 
+  #   name: "Audience - Geo - Language"
+  #   dimensions: ["ga:language"]
+  #   metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
+  #
+  # - id: 33 
+  #   name: "Audience - Geo - Location"
+  #   dimensions: ["ga:country"]
+  #   metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
+  #
+  # - id: 34 
+  #   name: "Browser and Screen Resolution"
+  #   dimensions: ["ga:browser", "ga:screenResolution"]
+  #   metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
+  #
+  # - id: 35 
+  #   name: "Source Medium by country"
+  #   dimensions: ["ga:sourceMedium", "ga:country"]
+  #   metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
+  #
+  # - id: 36 
+  #   name: "Events - Top Events"
+  #   dimensions: ["ga:eventCategory"]
+  #   metrics: ["ga:totalEvents", "ga:uniqueEvents", "ga:eventValue", "ga:avgEventValue"]
+  #
+  # - id: 37 
+  #   name: "Audience - Behaviour - New vs Returning"
+  #   dimensions: ["ga:userType"]
+  #   metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
+  #
+  # - id: 38 
+  #   name: "Audience - Behaviour - Frequency and Recency"
+  #   dimensions: ["ga:sessionCount"]
+  #   metrics: ["ga:sessions", "ga:pageviews"]
+  #
+  # - id: 39 
+  #   name: "Audience - Behaviour - Engagement"
+  #   dimensions: ["ga:sessionDurationBucket"]
+  #   metrics: ["ga:sessions", "ga:pageviews"]
+  #
+  # - id: 40 
+  #   name: "Conversions - Goals - Reverse Goal Path"
+  #   dimensions: ["ga:goalCompletionLocation", "ga:goalPreviousStep1", "ga:goalPreviousStep2", "ga:goalPreviousStep3"]
+  #   metrics: ["ga:goalCompletionsAll"]
   
-  - id: 26 
-    name: "Site Content - Content Drilldown"
-    dimensions: ["ga:pagePathLevel1"]
-    metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:entrances", "ga:bounceRate", "ga:exitRate"]
+  - id: 41 
+    name: "Ecommerce - Product Performance"
+    dimensions: ["ga:productName"]
+    metrics: ["ga:itemQuantity", "ga:uniquePurchases", "ga:itemRevenue", "ga:revenuePerItem", "ga:itemsPerPurchase"]
 
-  - id: 27 
-    name: "Site Content - Landing Pages"
-    dimensions: ["ga:landingPagePath"]
-    metrics: ["ga:sessions", "ga:percentNewSessions", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:transactionsPerSession"]
+  - id: 42 
+    name: "Ecommerce - Sales Performance"
+    dimensions: ["ga:date"]
+    metrics: ["ga:transactions", "ga:transactionRevenue"]
 
-  - id: 28
-    name: "Site Content - Exit Pages"
-    dimensions: ["ga:pagePath"]
-    metrics: ["ga:exits", "ga:pageviews", "ga:uniquePageviews", "ga:exitRate"]
+  - id: 43 
+    name: "Ecommerce - Transactions"
+    dimensions: ["ga:transactionId"]
+    metrics: ["ga:transactionTax", "ga:transactionRevenue", "ga:transactionShipping", "ga:itemQuantity"]
 
-  - id: 29 
-    name: "Behaviour - All Pages by country"
-    dimensions: ["ga:pagePath", "ga:country"]
-    metrics: ["ga:pageviews", "ga:uniquePageviews", "ga:avgTimeOnPage", "ga:entrances", "ga:bounceRate", "ga:exitRate", "ga:pageValue"]
-
-  - id: 30 
-    name: "Behaviour - Landing pages by country"
-    dimensions: ["ga:landingPagePath", "ga:country"]
-    metrics: ["ga:sessions", "ga:percentNewSessions", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:transactionsPerSession"]
-
-  - id: 31 
-    name: "Behaviour - Exit pages by country"
-    dimensions: ["ga:pagePath", "ga:country"]
-    metrics: ["ga:exits", "ga:pageviews", "ga:uniquePageviews", "ga:exitRate"]
-
-  - id: 32 
-    name: "Audience - Geo - Language"
-    dimensions: ["ga:language"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
-
-  - id: 33 
-    name: "Audience - Geo - Location"
-    dimensions: ["ga:country"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
-
-  - id: 34 
-    name: "Browser and Screen Resolution"
-    dimensions: ["ga:browser", "ga:screenResolution"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
-
-  - id: 35 
-    name: "Source Medium by country"
-    dimensions: ["ga:sourceMedium", "ga:country"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
-
-  - id: 36 
-    name: "Events - Top Events"
-    dimensions: ["ga:eventCategory"]
-    metrics: ["ga:totalEvents", "ga:uniqueEvents", "ga:eventValue", "ga:avgEventValue"]
-
-  - id: 37 
-    name: "Audience - Behaviour - New vs Returning"
-    dimensions: ["ga:userType"]
-    metrics: ["ga:sessions", "ga:users", "ga:newUsers", "ga:bounceRate", "ga:pageviewsPerSession", "ga:avgSessionDuration", "ga:transactions", "ga:transactionRevenue", "ga:revenuePerTransaction", "ga:transactionsPerSession"]
-
-  - id: 38 
-    name: "Audience - Behaviour - Frequency and Recency"
-    dimensions: ["ga:sessionCount"]
-    metrics: ["ga:sessions", "ga:pageviews"]
-
-  - id: 39 
-    name: "Audience - Behaviour - Engagement"
-    dimensions: ["ga:sessionDurationBucket"]
-    metrics: ["ga:sessions", "ga:pageviews"]
-
-  - id: 40 
-    name: "Conversions - Goals - Reverse Goal Path"
-    dimensions: ["ga:goalCompletionLocation", "ga:goalPreviousStep1", "ga:goalPreviousStep2", "ga:goalPreviousStep3"]
-    metrics: ["ga:goalCompletionsAll"]
+  - id: 44 
+    name: "Ecommerce - Time to Purchase"
+    dimensions: ["ga:daysToTransaction"]
+    metrics: ["ga:transactions"]
